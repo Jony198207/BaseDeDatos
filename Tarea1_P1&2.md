@@ -1,6 +1,7 @@
 # Tarea 1 
 
 
+
 --1. Qué contactos de proveedores tienen la posición de sales representative?
 
 select *
@@ -136,10 +137,10 @@ from order_details od));
 --Podemos categorizarlos según el promedio de pedidos general,.
 
 --Query para conocer el promedio
-select customer_id, avg(count) as prom
+
+select avg(count) as prom
 from (select customer_id,count(*)
-from orders o group by customer_id) as a
-group by customer_id;
+from orders o group by customer_id)as a;
 
 --Notamos que el promedio de pedidos es de alrededor de 9.3, con base en eso...
 --Podemos hacer un "Alter table customers add status enum{la categorización deseada}" según el criterio que decidamos.
@@ -190,3 +191,4 @@ where cantidad = (select max(cantidad) from (select o.ship_country, sum(od.quant
 from orders o 
 join order_details od using (order_id)
 group by o.ship_country) as aux);
+
