@@ -93,10 +93,10 @@ from employees e;
 
 --2. Cuál es la orden más reciente por cliente?
 
-select o.order_id as orden, max(o.order_date) as Orden_Mas_Reciente
+select c.customer_id  as cliente, max(o.order_date) as Orden_Mas_Reciente
 from orders o
 join customers c using (customer_id)
-group by customer_id,o.order_id;
+group by c.customer_id;
 
 --3. De nuestros clientes, qué función desempeñan y cuántos son?
 
