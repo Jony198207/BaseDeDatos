@@ -89,8 +89,9 @@ and email not like '%<%'
 
 Este es el query que presenté en clase como solución a esta tarea.
 
+```
 select sas.nombre,string_agg(sas.equipo, ', '), sum(sas.anios_servicio)
 from superheroes_anios_servicio sas
 group by sas.nombre;
 
-
+```
