@@ -41,13 +41,15 @@ and email not like '%^@%._%');
 ## Query para obtener cualquier email inválido
 
 Si queremos validar cualquier correo o, en este caso, obtener correos inválidos, entonces debemos de considerar diversos casos. Por ejemplo, un correo válido
-no puede tener dos `@`, mucho menos consecutivos, tampoco puede tener dos puntos seguidos o empezar con un caracter de este tipo. De igual manera, no acepta caracteres
-especiales del teclado, como por ejemplo: `|, !, ", /, ^, >, ;, ","` etc, de manera que si un email rompe con alguna de estas reglas, será un email inválido y, por tanto, el query lo deberá reportar.
+no puede tener dos `@`, mucho menos consecutivos, tampoco puede tener dos puntos o dos guiones seguidos o empezar con un caracter de este tipo. De igual manera, no acepta caracteres especiales del teclado, como por ejemplo: `|, !, ", /, ^, >, ;, ","` etc, de manera que si un email rompe con alguna de estas reglas, será un email inválido y, por tanto, el query lo deberá reportar. Tampoco acepta la letra ñ, minúscula o mayúscula o vocales con acento.
 Con eso en mente, obtenemos el siguiente query:
 
 ```
 select * from Tarea2 where not (email like '%@%._%'
 and email not like '%@%@%'
+and email not like '-%'
+and email not like '.%'
+and email not like '@%'
 and email not like '%..%'
 and email not like '%--%'
 and email not like '% %'
@@ -81,6 +83,18 @@ and email not like '%;%'
 and email not like '%`%'
 and email not like '%>%'
 and email not like '%<%'
+and email not like '%ñ%'
+and email not like '%Ñ%'
+and email not like '%á%'
+and email not like '%é%'
+and email not like '%í%'
+and email not like '%ó%'
+and email not like '%ú%'
+and email not like '%Á%'
+and email not like '%É%'
+and email not like '%Í%'
+and email not like '%Ó%'
+and email not like '%Ú%'
 );
 
 ```
