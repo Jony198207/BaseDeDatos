@@ -52,6 +52,11 @@ Cabe aclarar que con estas medidas, suponemos que el brazo robótico es capaz de
 Así mismo, sabemos también que el **radio externo** será el resultado de sumarle 31 (largo de cada película) a nuestro radio interno, es decir, de 66.80 cm. 
 Dichas medidas están dadas en centímetros. Con esto podremos tener una separación angular cada vez más grande entre cada película por nivel.
 
+Por ejemplo, un nivel se vería así, dónde los espacios naranjas son aquellos designados al almacenamiento de cada película:
+
+![image](https://user-images.githubusercontent.com/101894380/171529386-1f4a7bc5-d2d7-4ebe-a1fd-4a3cfdf788dd.png)
+
+
 ## Recopilando medidas del cilindro
 
 - Radio interno de 35.80 cm.
