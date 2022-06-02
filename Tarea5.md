@@ -37,3 +37,11 @@ permitir un fácil acceso por parte del brazo robotizado.
 Es decir, cada slock será algo así.
 
 ![image](https://user-images.githubusercontent.com/101894380/171524382-18245d3a-6f93-4340-91f5-1f973a76ca80.png)
+
+Así, sabemos que nuestro cilindro hueco tendrá un radio correspondiente al de un perímetro de 9 cm x 20 (películas por nivel), es decir, que su perímetro sea: `select 9 * 25 as perímetro;`, es decir:
+
+![image](https://user-images.githubusercontent.com/101894380/171525543-354c5485-748b-47ee-89f0-87dbc4f9ba1e.png)
+
+Sabemos que el perímetro de un circulo se calcula con `2 x π x r `, entonces podemos calcular nuestro radio ideal solucionando `r = 225/(2 x π)`
+
+
